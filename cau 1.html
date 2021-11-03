@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background-color: white;
+            height: 450px;
+            width: 700px; 
+           
+        }
+        #table {
+            border: 1px solid black;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            height: 400px;
+        }
+          
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+            margin-top: 30px;
+            background-color:rgb(223, 252, 249);
+            
+        }
+        
+        form{
+		    margin: 2px;
+            width: 350px;
+            
+	    }
+	    
+     </style>
+</head>
+<body>
+    
+        
+        <div id="table">
+         <h1 style="text-align: center;color:darkseagreen;margin-top: 20px;">Phiếu đăng kí tham gia chương trình khuyến mãi</h1>
+         <table>
+             <tr>
+                 <td>Họ và tên</td>
+                 <td> <input type="text" placeholder="Họ và tên " id="ht"></td>
+             </tr>
+             <tr>
+                 <td>Địa chỉ</td>
+                 <td><input type="text" placeholder="Địa chỉ"  id="dc"></td>
+             </tr>
+             <tr>
+                <td>Điện thoại</td>
+                <td> <input type="text" placeholder=" Điện thoại" id="dt"></td>
+            </tr>
+            <tr>
+                <td>Phái</td>
+                <td>
+                    <form>
+                        <input type="radio" name="phai" value="nam" checked="checked">Nam
+                        <input type="radio" name="phai" value="nu">Nữ
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select id="nghenghiep">
+                        <option value="bacsi">Bác Sĩ</option>
+                        <option value="kysu">Kỹ Sư</option>
+                        <option value="giaovien">Giáo Viên</option>
+                        <option value="khac">Khác</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn sản phẩm tham gia</td>
+                <td>
+                    <select id="sanpham">
+                        <option value="kemdanhrang">Kem đánh răng</option>
+                        <option value="botgiat">Bột giặt</option>
+                        <option value="daugoidau">Dầu gội đầu</option>
+                        <option value="suatam">Sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Số người tham gia dự đoán</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button onclick = "hienthi()" 
+                            style="width: 80px;" 
+                    >Đồng ý</button>
+                </td>
+            </tr>
+            <tr style="color: red; text-align: center; " id="label">
+                
+            </tr>
+         </table>
+        </div>
+    </body>
+    <script>
+        var label = document.getElementById("label");
+        function hienthi(){
+            label.innerHTML = `<td colspan="2">Bạn đã đăng ký thành công!!!</td>`
+        }
+    </script>
+    
+</html>
